@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for teacher in teachers %}
+        <tr>
+          <td>{{ teacher.name }}</td>
+          <td>{{ teacher.last_name }}</td>
+          <td>{{ teacher.dni }}</td>
+          <td>{{ teacher.status}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

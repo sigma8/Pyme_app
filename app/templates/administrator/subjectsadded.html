@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripcion</th>
+        <th>Fecha incio</th>
+        <th>Fecha finalizacion</th>
+        <th>Hora Inicio</th>
+        <th>Hora Fin</th>
+        <th>Dia</th>
+        <th>Capacidad</th>
+        <th>Profesor</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for subject in subjects %}
+        <tr>
+          <td>{{ subject.name }}</td>
+          <td>{{ subject.description }}</td>
+          <td>{{ subject.start }}</td>
+          <td>{{ subject.end }}</td>
+          <td>{{ subject.day }}</td>
+          <td>{{ subject.max_students }}</td>
+          <td>{{ subject.teacher }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% endblock %}

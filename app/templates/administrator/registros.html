@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+  <table id="data" class="table table-striped">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Username</th>
+        <th>Email</th>
+        <th>Administrador</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for usuario in usuarios %}
+        <tr>
+          <td>{{ usuario.name }}</td>
+          <td>{{ usuario.last_name }}</td>
+          <td>{{ usuario.username }}</td>
+          <td>{{ usuario.email }}</td>
+          <td>{{ usuario.type_id }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
